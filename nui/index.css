@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 800;
+  src: url(./font/NanumSquareEB.woff2) format('woff2');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'NanumSquare';
+  font-weight: 800;
+  letter-spacing: -1px;
+  box-sizing: border-box;
+}
+
+/* body { 주석 처리 
+  background-color: rgba(0, 0, 0, 0.363);
+} */
+
+#container{
+  display: none;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+#container > .main{
+  padding: 12px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 20vh;
+  width: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#container > .main::after{
+  content: "";
+  position: absolute;
+  top: -90px;
+  right: -60px;
+  width: 150px;
+  height: 150px;
+  background: url("./img/logo.png") no-repeat center;
+  background-size: 100%;
+}
+
+#container > .main > #time::before{
+  content: "리부팅까지 남은 시간";
+}
+
